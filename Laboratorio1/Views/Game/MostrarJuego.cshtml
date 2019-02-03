@@ -1,0 +1,55 @@
+﻿@model Laboratorio1.Models.Game
+@{
+
+    ViewBag.Title = Model.nombre;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">
+            <h1>@Model.nombre</h1> 
+        </h1>
+        <p class="lead">
+            <h3>@Model.año - @Model.categoria</h3>
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-5">
+        <h2>Calificación: @Model.puntuacion</h2>
+        <text>Este es un juego del @Model.año, desarrollado por @Model.estudio.</text>
+    </div>
+    <div class="col-lg-5">
+        <img src="@Model.imagen" width="250" alt="https://www.google.com/search?q=image+not+found&rlz=1C1GCEA_enGT828GT828&tbm=isch&source=iu&ictx=1&fir=Inbo7JFBN4FtWM%253A%252CuL6fUflsvYFiAM%252C_&usg=AI4_-kQyWZ5e5kMoZpAJr0Q99wKB22KimA&sa=X&ved=2ahUKEwjS5Ku00IzgAhUJnKwKHQZqAFIQ9QEwAHoECAUQBA#imgrc=Inbo7JFBN4FtWM:" />
+    </div>
+</div>
+
+
+Test
+
+<table class="table">
+    <tr>
+        @*Tiempo*@
+        <th>
+            Tiempo
+        </th>
+        <td>
+            @Laboratorio1.Models.Procesos.resultadoTiempo
+        </td>
+        @*Process ID*@
+        <th>
+            Process ID
+        </th>
+        <td>
+            @Laboratorio1.Models.Procesos.resultadoPID
+        </td>
+        @*Memoria*@
+        <th>
+            Memoria
+        </th>
+        <td>
+            @Laboratorio1.Models.Procesos.resultadoMemoria
+        </td>
+    </tr>
+</table>

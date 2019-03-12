@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "recorridos2";
+}
+
+<h2>Seleccione tipo de recorrido:</h2>
+
+<input type="button"
+       value="Preorden"
+       onclick="location.href= '@Url.Action("preorden", "Medicamento" )'" %>
+
+<input type="button"
+       value="Inorden"
+       onclick="location.href= '@Url.Action("inorden", "Medicamento" )'" %>
+
+<input type="button"
+       value="Postorden"
+       onclick="location.href= '@Url.Action("postorden", "Medicamento" )'" %>
+
+

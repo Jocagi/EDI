@@ -171,8 +171,8 @@ namespace ArbolBinario
         {
             if (raiz != null)
             {
-                Inorden(ref lista, raiz.izquierdo);
-                Inorden(ref lista, raiz.derecho);
+                Postorden(ref lista, raiz.izquierdo);
+                Postorden(ref lista, raiz.derecho);
                 lista.Add(raiz.medicamento);
             }
         }

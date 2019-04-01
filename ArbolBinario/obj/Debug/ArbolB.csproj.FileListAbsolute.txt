@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\Laboratorio3 - copia\ArbolBinario\bin\Debug\ArbolBinario.dll.config
+C:\Users\user\Desktop\Laboratorio3 - copia\ArbolBinario\bin\Debug\ArbolBinario.dll
+C:\Users\user\Desktop\Laboratorio3 - copia\ArbolBinario\bin\Debug\ArbolBinario.pdb
+C:\Users\user\Desktop\Laboratorio3 - copia\ArbolBinario\obj\Debug\ArbolB.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Laboratorio3 - copia\ArbolBinario\obj\Debug\ArbolB.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Laboratorio3 - copia\ArbolBinario\obj\Debug\ArbolBinario.dll
+C:\Users\user\Desktop\Laboratorio3 - copia\ArbolBinario\obj\Debug\ArbolBinario.pdb
+C:\Users\user\Desktop\Laboratorio 4\ArbolBinario\bin\Debug\ArbolBinario.dll.config
+C:\Users\user\Desktop\Laboratorio 4\ArbolBinario\bin\Debug\ArbolBinario.dll
+C:\Users\user\Desktop\Laboratorio 4\ArbolBinario\bin\Debug\ArbolBinario.pdb
+C:\Users\user\Desktop\Laboratorio 4\ArbolBinario\obj\Debug\ArbolB.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Laboratorio 4\ArbolBinario\obj\Debug\ArbolB.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Laboratorio 4\ArbolBinario\obj\Debug\ArbolBinario.dll
+C:\Users\user\Desktop\Laboratorio 4\ArbolBinario\obj\Debug\ArbolBinario.pdb

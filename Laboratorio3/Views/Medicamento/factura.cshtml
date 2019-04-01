@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ArbolBinario.Medicamento>
+
+@{
+    ViewBag.Title = "factura";
+}
+
+<h1>Factura</h1>
+<h2>@DateTime.Now.Date</h2>
+
+<h3>Nombre: @Laboratorio3.Controllers.MedicamentoController.cliente.nombre </h3>
+<h3>Direccion: @Laboratorio3.Controllers.MedicamentoController.cliente.direccion </h3>
+<h3>Nit: @Laboratorio3.Controllers.MedicamentoController.cliente.nit </h3>
+
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Precio
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        
+        <td>
+           $ @Html.DisplayFor(modelItem => item.precio)
+        </td>
+    </tr>
+}
+
+</table>
+
+<h2>Total: @Laboratorio3.Controllers.MedicamentoController.cliente.totalAPagar()</h2>

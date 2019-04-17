@@ -1,0 +1,59 @@
+﻿@model IEnumerable<LaboratorioDiccionarios.Models.Calcomania>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>UEFA CHAMPIONS LEAGUE STICKER ALBUM</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Escriba el nombre del equipo o el número de la calcomanía:
+        @Html.TextBox("id")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jugador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.coleccionada)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.jugador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.equipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.coleccionada)
+            </td>
+            <td>
+                @Html.ActionLink("Cambiar Coleccionado", "EditarStatus", new { id=item.numero }) 
+            </td>
+        </tr>
+    }
+
+</table>

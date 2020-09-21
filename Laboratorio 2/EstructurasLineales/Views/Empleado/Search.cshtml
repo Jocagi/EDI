@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Buscador";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<EstructurasLineales.Models.Empleado>
+
+<h2>Buscar</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Realizar Busqueda: @Html.TextBox("codigo")
+        <input type="submit" value="Buscar" />
+
+        <br> Escriba el nombre del empleado, su codigo o la cantidad de horas trabajadas...
+        <br> Si desea ver a los empleados que estan en la oficina en ese momento escriba "Oficina" y si desea ver quienes no es estan en la oficina escriba "!Oficina"...
+
+    </p>
+
+
+}
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Codigo
+        </th>
+        <th>
+            Hora de Entrada
+        </th>
+        <th>
+            Hora de Salida
+        </th>
+        <th>
+            Esta en Oficina
+        </th>
+        <th>
+            Horas Trabajadas
+        </th>
+        <th>
+            Salario (Q.)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.ActionLink(item.nombre, "Details", new { id = item.codigo })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horaEntrada) : @Html.DisplayFor(modelItem => item.minutoEntrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horaSalida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.disp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salario)
+        </td>
+    </tr>
+    }
+
+</table>
+
+
+<h2>Simulacion de salidas y regresos</h2>
+
+<input type="button"
+       value="Salida a visita"
+       onclick="location.href= '@Url.Action("Salida", "Empleado" )'" %> 
+<br>
+<input type="button"
+       value="Regreso a oficina"
+       onclick="location.href= '@Url.Action("Regreso", "Empleado" )'" %> 
+

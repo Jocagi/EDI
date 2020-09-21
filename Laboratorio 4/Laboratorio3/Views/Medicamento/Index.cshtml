@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h1>Tu salud en mis manos</h1>
+</div>
+
+@using (Html.BeginForm())
+{
+
+    <p>
+        Escriba la ruta del archivo csv: @Html.TextBox("Path")
+        <input type="submit" value="Siguiente" />
+    </p>
+
+}

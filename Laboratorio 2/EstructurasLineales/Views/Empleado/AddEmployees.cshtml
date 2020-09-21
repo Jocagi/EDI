@@ -1,0 +1,50 @@
+﻿@model EstructurasLineales.Models.Empleado
+
+@{
+    ViewData["Title"] = "AddEmployees";
+}
+
+<h2>AddEmployees</h2>
+
+<h4>Empleado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddEmployees">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @*<label asp-for="nombre" class="control-label"></label>*@
+                Nombre:
+                <input asp-for="nombre" class="form-control" />
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="codigo" class="control-label"></label>*@
+                Codigo de Empleado:
+                <input asp-for="codigo" class="form-control" />
+                <span asp-validation-for="codigo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="entrada" class="control-label"></label>*@
+                Hora y minuto de Entrada:
+                <br>
+                Hora:
+                <input asp-for="horaEntrada" class="form-control" />
+                <span asp-validation-for="horaEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Minuto:
+                <input asp-for="minutoEntrada" class="form-control" />
+                <span asp-validation-for="minutoEntrada" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+</div>
+

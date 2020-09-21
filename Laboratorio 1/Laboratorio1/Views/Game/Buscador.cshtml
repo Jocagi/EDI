@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Buscador";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Laboratorio1.Models.Game>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Buscar</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar por id: @Html.TextBox("id")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            ID
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.nombre, "MostrarJuego", new { id = item.id}) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.id})
+            </td>
+        </tr>
+    }
+
+</table>
+
+Test
+
+<table class="table">
+    <tr>
+        @*Tiempo*@
+        <th>
+            Tiempo
+        </th>
+        <td>
+            @Laboratorio1.Models.Procesos.resultadoTiempo
+        </td>
+        @*Process ID*@
+        <th>
+            Process ID
+        </th>
+        <td>
+            @Laboratorio1.Models.Procesos.resultadoPID
+        </td>
+        @*Memoria*@
+        <th>
+            Memoria
+        </th>
+        <td>
+            @Laboratorio1.Models.Procesos.resultadoMemoria
+        </td>
+    </tr>
+ </table>

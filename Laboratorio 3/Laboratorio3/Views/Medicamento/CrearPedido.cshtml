@@ -1,0 +1,47 @@
+﻿@model Laboratorio3.Cliente
+
+@{
+    ViewBag.Title = "CrearPedido";
+}
+
+<h2>CrearPedido</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Cliente</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nombre)
+                @Html.ValidationMessageFor(model => model.nombre)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.direccion)
+                @Html.ValidationMessageFor(model => model.direccion)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nit, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nit)
+                @Html.ValidationMessageFor(model => model.nit)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

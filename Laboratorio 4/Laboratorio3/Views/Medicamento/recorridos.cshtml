@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "recorridos";
+}
+
+<h2>Exportar recorrido a JSON</h2>
+
+@using (Html.BeginForm())
+{
+<p>
+    Escriba la ruta en la que desea guardar su archivo JSON: @Html.TextBox("Path")
+    <input type="submit" value="Siguiente" />
+</p>
+}
+

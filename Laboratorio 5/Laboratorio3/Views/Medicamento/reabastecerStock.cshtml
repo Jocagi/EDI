@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "reabastecerStock";
+}
+
+<h2>Reabastecer Stock</h2>
+
+@model ArbolBinario.Medicamento
+
+@using (Html.BeginForm())
+{
+    <p>
+        Escriba el nombre del medicamento: @Html.TextBox("nombre")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+    <table class="table">
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                ID
+            </th>
+            <th></th>
+        </tr>
+
+        @if (Model != null)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.id)
+                </td>
+                @if (Model.cantidad > 0)
+                {
+                    <td>
+                        El medicamento aun esta disponible
+                    </td>
+                 }
+                else
+                {
+                <td>
+                    @Html.ActionLink("Reabastecer", "reabastecer", Model)
+                </td>
+                }
+                </tr>
+            }
+    </table>

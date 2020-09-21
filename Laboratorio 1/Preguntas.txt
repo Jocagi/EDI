@@ -1,0 +1,11 @@
+Se nota el cambio en el tiempo?
+/El cambio en el tiempo es dificil de percibir.
+A que se debe el cambio?
+/Es un cambio minimo, pero puede ser debido a los diferentes procesos que lleva la computadora en cada momento.
+Cuanta memoria ocupa el sitio?
+/8MB aprox.
+De donde es el proceso obtenido?
+/Engloba el sitio web, el navegador y otros datos basura.
+Bootstrap?
+/Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.
+/Contiene plantillas muy utiles para el desarrollo de paginas web.

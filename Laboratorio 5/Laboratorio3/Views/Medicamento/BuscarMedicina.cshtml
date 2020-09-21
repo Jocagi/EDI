@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "BuscarMedicina";
+}
+
+<h2>Buscar Medicina</h2>
+
+@model ArbolBinario.Medicamento
+
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar por nombre: @Html.TextBox("nombre")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+    <table class="table">
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Cantidad
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Descripcion
+            </th>
+            <th></th>
+        </tr>
+
+        @if (Model != null)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.cantidad)
+            </td>
+            <td>
+                $ @Html.DisplayFor(model => model.precio)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.descripcion)
+            </td>
+            @if (Model.cantidad != 0)
+            {
+                <td>
+                    @Html.ActionLink("Agregar", "agregarPedido", Model)
+                </td>
+            }
+        </tr>
+        }
+
+
+    </table>
+
+<input type="button"
+       value="Terminar Compra"
+       onclick="location.href= '@Url.Action("factura", "Medicamento" )'" %>
